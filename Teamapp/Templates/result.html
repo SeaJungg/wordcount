@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='{% static "css/mystyle.css" %}' rel="stylesheet">
+    </head>
+    <body>
+        <h1>머맛! 담신믄 넴몸넴몸 고먐미믜 저주메 걸려서 미믐믈 모두 밇멌습니다!</h1>
+        <h2>촘 {{total}}개의 단머로 미루어져 밌군묘!</h2>
+        <h2>뭔문</h2>
+        
+        {{ fulltext }}
+        
+        <h2>결과</h2>
+        
+        {%for a,b in dictionary%}
+            {{a}} : {{b}}
+            <br>
+        {%endfor%}
+
+        
+
+        <form action="{%url 'meow' %}">
+            <button type="meow" >먀몸</button>
+        </form>
+        <br>
+        
+    </body>
+</html>
